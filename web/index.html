@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Теория игр</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="resources/css/style.css" rel="stylesheet" />
+    <script src="resources/js/index.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header panel">
+        <button type="button" class="btn btn-info" onclick=toTheme("Greet")>Главная</button>
+        <button type="button" class="btn btn-info" id="logout" onclick="onLogout()">Выйти</button>
+    </div>
+    <div class="row panel">
+        <div class="col-md-2 panel" id="navigation">
+            <div>
+                <button type="button" data-toggle="collapse" data-target="#contents" class="btn btn-info b1">Содержание</button>
+                <div id="contents" class="collapse">
+                    <ul>
+                        <li><button type="button" class=" btn btn-info" onclick=toTheme("Theme1")>Тема #1</button></li>
+                        <li><button type="button" class="btn btn-info" onclick=toTheme("Theme2")>Тема #2</button></li>
+                    </ul>
+                </div>
+                <button type="button" data-toggle="collapse" data-target="#tasks" class="btn btn-info b1">Задачи</button>
+                <div id="tasks" class="collapse">
+                    <ul>
+                        <li><button type="button" class=" btn btn-info" onclick=getTask("1")>Тема #1</button></li>
+                        <li><button type="button" class=" btn btn-info" onclick=getTask("2")>Тема #2</button></li>
+                    </ul>
+                </div>
+                <button type="button" class="btn btn-info" onclick=getStatistics()>Статистика</button>
+
+            </div>
+        </div>
+        <div class="col-md-10 panel" id="text">
+        </div>
+    </div>
+</div>
+</body>
+</html>
